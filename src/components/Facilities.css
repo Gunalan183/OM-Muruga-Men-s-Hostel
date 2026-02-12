@@ -1,0 +1,96 @@
+.facilities {
+  padding: 5rem 2rem;
+  background: #f8fafc;
+}
+
+.facilities-section {
+  margin-bottom: 4rem;
+}
+
+.subsection-title {
+  font-size: 2rem;
+  color: #313851;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.facilities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.facility-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: all 0.3s;
+  border: 2px solid transparent;
+}
+
+.facility-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(194, 203, 211, 0.3);
+  border-color: #C2CBD3;
+}
+
+.facility-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+  padding: 1rem;
+  border-radius: 50%;
+}
+
+.food-icon {
+  background: linear-gradient(135deg, #e8ecef 0%, #C2CBD3 100%);
+  color: #313851;
+}
+
+.amenity-icon {
+  background: linear-gradient(135deg, #d4dce3 0%, #C2CBD3 100%);
+  color: #313851;
+}
+
+.facility-card h4 {
+  font-size: 1.3rem;
+  color: #313851;
+  margin-bottom: 0.5rem;
+}
+
+.facility-card p {
+  color: #64748b;
+  font-size: 0.95rem;
+}
+
+.facilities-note {
+  background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%);
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  text-align: center;
+  border-left: 4px solid #22c55e;
+  margin-top: 3rem;
+}
+
+.facilities-note p {
+  color: #14532d;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .facilities {
+    padding: 3rem 1.5rem;
+  }
+
+  .facilities-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .subsection-title {
+    font-size: 1.5rem;
+  }
+}

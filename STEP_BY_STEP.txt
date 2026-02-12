@@ -1,0 +1,177 @@
+================================================================================
+    OM MURUGA MEN'S HOSTEL WEBSITE - STEP BY STEP SETUP GUIDE
+================================================================================
+
+ERROR YOU'RE SEEING:
+  "Failed to resolve import react-icons/fa"
+
+WHY?
+  Dependencies (react-icons) are not installed yet.
+
+HOW TO FIX:
+  Follow the steps below!
+
+================================================================================
+STEP 1: OPEN TERMINAL IN PROJECT FOLDER
+================================================================================
+
+Current Location: G:\Project\OM Murugaa Pg Mens Hostel\om-muruga-hostel
+
+METHOD 1 - File Explorer:
+  1. Open File Explorer
+  2. Go to: G:\Project\OM Murugaa Pg Mens Hostel\om-muruga-hostel
+  3. Click in the address bar
+  4. Type: cmd
+  5. Press Enter
+
+METHOD 2 - Right Click:
+  1. Navigate to the om-muruga-hostel folder
+  2. Right-click in empty space
+  3. Select "Open in Terminal" or "Open PowerShell window here"
+
+================================================================================
+STEP 2: INSTALL DEPENDENCIES (REQUIRED!)
+================================================================================
+
+In the terminal, type ONE of these commands:
+
+OPTION A - Easy Way:
+  INSTALL_DEPENDENCIES.bat
+
+OPTION B - Manual Way:
+  npm install
+
+Press Enter and WAIT for it to complete (may take 1-2 minutes)
+
+You'll see:
+  - Downloading packages...
+  - Installing...
+  - "added XXX packages"
+
+================================================================================
+STEP 3: COPY PHOTOS TO PUBLIC FOLDER
+================================================================================
+
+In the same terminal, type ONE of these:
+
+OPTION A - Batch File:
+  copy-photos.bat
+
+OPTION B - PowerShell:
+  .\copy-photos.ps1
+
+OPTION C - Manual:
+  1. Create folder: public\photos\
+  2. Copy all .jpeg files from parent photos folder
+  3. Paste into public\photos\
+
+================================================================================
+STEP 4: START THE WEBSITE
+================================================================================
+
+In the terminal, type:
+  npm run dev
+
+You'll see:
+  VITE v7.3.1  ready in XXXms
+  ➜  Local:   http://localhost:5173/
+
+================================================================================
+STEP 5: OPEN IN BROWSER
+================================================================================
+
+Open your web browser and go to:
+  http://localhost:5173/
+
+You should see the OM Muruga Men's Hostel website!
+
+================================================================================
+TROUBLESHOOTING
+================================================================================
+
+ERROR: "npm: command not found"
+FIX: Install Node.js from https://nodejs.org/
+
+ERROR: "Port 5173 already in use"
+FIX: Close other terminals or use: npm run dev -- --port 3000
+
+ERROR: Images not showing
+FIX: Make sure you completed Step 3 (copy photos)
+
+ERROR: Still seeing react-icons error
+FIX: 
+  1. Stop the server (Ctrl + C)
+  2. Delete node_modules folder
+  3. Run: npm install
+  4. Run: npm run dev
+
+================================================================================
+BEFORE DEPLOYING TO PRODUCTION
+================================================================================
+
+Update phone number in these files:
+  ✓ src/components/Navbar.jsx (line 38)
+  ✓ src/components/Hero.jsx (lines 26, 29)
+  ✓ src/components/Contact.jsx (lines 60, 82, 95)
+  ✓ src/components/Footer.jsx (lines 21, 24, 60)
+
+Replace: +919876543210
+With: Your actual phone number
+
+Update email:
+  ✓ src/components/Contact.jsx (line 98)
+  ✓ src/components/Footer.jsx (line 56)
+
+Replace: info@ommurugehostel.com
+With: Your actual email
+
+================================================================================
+QUICK REFERENCE
+================================================================================
+
+Install dependencies:     npm install
+Start dev server:         npm run dev
+Build for production:     npm run build
+Stop server:              Ctrl + C
+Clear cache:              npm cache clean --force
+
+================================================================================
+DOCUMENTATION FILES
+================================================================================
+
+START_HERE.md              ← You are here!
+QUICK_START.md             Quick setup guide
+FIX_ERRORS.md              Troubleshooting guide
+README.md                  Full documentation
+SETUP_INSTRUCTIONS.md      Detailed setup
+DEVELOPER_GUIDE.md         For developers
+PROJECT_SUMMARY.md         Project overview
+FEATURES.md                Feature list
+DEPLOYMENT_CHECKLIST.md    Pre-deployment checklist
+
+================================================================================
+NEED HELP?
+================================================================================
+
+1. Read FIX_ERRORS.md for common issues
+2. Check that you're in the correct folder
+3. Verify Node.js is installed: node --version
+4. Make sure npm install completed successfully
+
+================================================================================
+SUCCESS INDICATORS
+================================================================================
+
+✓ Terminal shows "VITE v7.3.1 ready"
+✓ Website opens at http://localhost:5173/
+✓ All images load in gallery
+✓ Navigation works smoothly
+✓ No errors in browser console (F12)
+
+================================================================================
+
+REMEMBER: The error is normal BEFORE running "npm install"!
+
+After running "npm install", the error will be fixed!
+
+================================================================================

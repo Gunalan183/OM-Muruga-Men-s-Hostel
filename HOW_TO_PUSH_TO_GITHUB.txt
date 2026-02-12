@@ -1,0 +1,152 @@
+╔════════════════════════════════════════════════════════════════════════════╗
+║                                                                            ║
+║                    HOW TO PUSH CODE TO GITHUB                              ║
+║                                                                            ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+REPOSITORY URL:
+  https://github.com/Gunalan183/OM-Muruga-Men-s-Hostel.git
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+METHOD 1: RUN THE BATCH FILE (EASIEST)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Make sure Git is installed on your computer
+   Download from: https://git-scm.com/download/win
+
+2. Navigate to: G:\Project\OM Murugaa Pg Mens Hostel\om-muruga-hostel
+
+3. Double-click: PUSH_TO_GITHUB.bat
+
+4. Wait for the process to complete
+
+5. If prompted for credentials:
+   - Username: Your GitHub username
+   - Password: Your GitHub Personal Access Token (not your password!)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+METHOD 2: RUN POWERSHELL SCRIPT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Right-click in the om-muruga-hostel folder
+2. Select "Open in Terminal" or "Open PowerShell window here"
+3. Type: .\PUSH_TO_GITHUB.ps1
+4. Press Enter
+5. Follow the prompts
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+METHOD 3: MANUAL GIT COMMANDS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Open terminal in the om-muruga-hostel folder and run:
+
+1. Initialize Git (if not already done):
+   git init
+
+2. Add remote repository:
+   git remote add origin https://github.com/Gunalan183/OM-Muruga-Men-s-Hostel.git
+
+3. Add all files:
+   git add .
+
+4. Commit changes:
+   git commit -m "Initial commit: OM Muruga Men's Hostel website"
+
+5. Push to GitHub:
+   git branch -M main
+   git push -u origin main
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+GITHUB AUTHENTICATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+GitHub no longer accepts passwords for authentication. You need to use:
+
+OPTION A: Personal Access Token (PAT)
+  1. Go to: https://github.com/settings/tokens
+  2. Click "Generate new token (classic)"
+  3. Give it a name: "OM Muruga Hostel"
+  4. Select scopes: Check "repo"
+  5. Click "Generate token"
+  6. Copy the token (you won't see it again!)
+  7. Use this token as your password when pushing
+
+OPTION B: GitHub Desktop (Easier)
+  1. Download: https://desktop.github.com/
+  2. Install and sign in
+  3. Add the repository
+  4. Commit and push from the GUI
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+TROUBLESHOOTING
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+ERROR: "git is not recognized"
+FIX: Install Git from https://git-scm.com/download/win
+
+ERROR: "remote origin already exists"
+FIX: Run: git remote remove origin
+     Then try again
+
+ERROR: "Authentication failed"
+FIX: Use a Personal Access Token instead of your password
+
+ERROR: "Repository not found"
+FIX: Make sure the repository exists on GitHub
+     Create it at: https://github.com/new
+
+ERROR: "Permission denied"
+FIX: Make sure you have access to the repository
+     Check if you're logged in with the correct account
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+WHAT GETS PUSHED?
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✓ All source code (src folder)
+✓ Public assets (photos, pictures)
+✓ Configuration files
+✓ Documentation files
+✓ Package.json
+
+✗ node_modules (excluded by .gitignore)
+✗ Build files (excluded by .gitignore)
+✗ Environment files (excluded by .gitignore)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+AFTER PUSHING
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Visit your repository:
+   https://github.com/Gunalan183/OM-Muruga-Men-s-Hostel
+
+2. Verify all files are there
+
+3. You can now:
+   - Deploy to Vercel/Netlify
+   - Share the code with others
+   - Clone it on other computers
+   - Track changes with version control
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+FUTURE UPDATES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+To push updates later:
+
+1. git add .
+2. git commit -m "Your update message"
+3. git push
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+TIP: The easiest way is to use GitHub Desktop or run PUSH_TO_GITHUB.bat!
+

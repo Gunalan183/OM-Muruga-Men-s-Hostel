@@ -1,0 +1,152 @@
+.location {
+  padding: 5rem 2rem;
+  background: #f8fafc;
+}
+
+.location-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+.location-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.address-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.address-icon {
+  font-size: 2.5rem;
+  color: #313851;
+  flex-shrink: 0;
+}
+
+.address-card h3 {
+  color: #313851;
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.address-card p {
+  color: #475569;
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+.nearby-section {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.nearby-section h3 {
+  color: #313851;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.nearby-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.nearby-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: #f8fafc;
+  border-radius: 8px;
+  transition: all 0.3s;
+}
+
+.nearby-item:hover {
+  background: #e8ecef;
+  transform: translateX(5px);
+}
+
+.nearby-icon {
+  font-size: 1.5rem;
+  color: #313851;
+  background: white;
+  padding: 0.75rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nearby-details h4 {
+  color: #313851;
+  margin-bottom: 0.25rem;
+}
+
+.nearby-details span {
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+.location-highlights {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.highlight {
+  background: #313851;
+  padding: 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 4px 15px rgba(49, 56, 81, 0.3);
+}
+
+.highlight-number {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.highlight-text {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.map-container {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  height: fit-content;
+}
+
+@media (max-width: 968px) {
+  .location {
+    padding: 3rem 1.5rem;
+  }
+
+  .location-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .location-highlights {
+    grid-template-columns: 1fr;
+  }
+
+  .map-container iframe {
+    height: 350px;
+  }
+}
