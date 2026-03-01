@@ -1,6 +1,6 @@
 .hero {
   min-height: 100vh;
-  background: linear-gradient(135deg, rgba(49, 56, 81, 0.9) 0%, rgba(49, 56, 81, 0.85) 100%), 
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.5) 0%, rgba(15, 23, 42, 0.45) 100%), 
               url('/photos/room 1.jpeg');
   background-size: cover;
   background-position: center;
@@ -50,12 +50,13 @@
   align-items: center;
   gap: 0.5rem;
   font-size: 1.1rem;
-  background: rgba(255,255,255,0.2);
+  background: rgba(255, 255, 255, 0.25);
   padding: 0.75rem 1.5rem;
   border-radius: 50px;
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255,255,255,0.3);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  color: #ffffff;
 }
 
 .hero-cta {
@@ -80,27 +81,27 @@
 }
 
 .btn-primary {
-  background: #C2CBD3;
-  color: #313851;
-  box-shadow: 0 4px 15px rgba(194, 203, 211, 0.3);
+  background: linear-gradient(135deg, #f97316 0%, #fb923c 100%);
+  color: white;
+  box-shadow: 0 4px 15px rgba(249, 115, 22, 0.4);
 }
 
 .btn-primary:hover {
-  background: #a8b5c0;
+  background: linear-gradient(135deg, #ea580c 0%, #f97316 100%);
   transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(194, 203, 211, 0.5);
+  box-shadow: 0 8px 25px rgba(249, 115, 22, 0.6);
 }
 
 .btn-secondary {
-  background: #313851;
-  color: #C2CBD3;
-  box-shadow: 0 4px 15px rgba(49, 56, 81, 0.3);
+  background: white;
+  color: #1e293b;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
 }
 
 .btn-secondary:hover {
-  background: #252a3d;
+  background: #f1f5f9;
   transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(49, 56, 81, 0.5);
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.5);
 }
 
 .quick-info {
@@ -113,18 +114,21 @@
 }
 
 .info-card {
-  background: white;
+  background: rgba(255, 255, 255, 0.15);
   padding: 2rem;
   border-radius: 12px;
   text-align: center;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   transition: transform 0.3s, box-shadow 0.3s;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
 }
 
 .info-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
-  border: 2px solid #C2CBD3;
+  box-shadow: 0 15px 35px rgba(249, 115, 22, 0.3);
+  border: 2px solid rgba(251, 146, 60, 0.5);
+  background: rgba(255, 255, 255, 0.2);
 }
 
 .info-icon {
@@ -133,13 +137,13 @@
 }
 
 .info-card h3 {
-  color: #313851;
+  color: #ffffff;
   margin-bottom: 0.5rem;
   font-size: 1.3rem;
 }
 
 .info-card p {
-  color: #64748b;
+  color: #e2e8f0;
 }
 
 @keyframes fadeInUp {
@@ -179,5 +183,37 @@
   .quick-info {
     grid-template-columns: 1fr;
     gap: 1.5rem;
+  }
+}
+
+/* Scroll Animation Styles */
+.hero-content {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.hero-content.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.info-card {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.info-card.animate-in {
+  animation: fadeInUpCard 0.6s ease-out forwards;
+}
+
+@keyframes fadeInUpCard {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

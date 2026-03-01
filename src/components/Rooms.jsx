@@ -1,4 +1,4 @@
-import { FaSnowflake, FaBolt, FaRupeeSign } from 'react-icons/fa';
+import { FaSnowflake, FaBolt, FaRupeeSign, FaMoneyBillWave, FaPlug } from 'react-icons/fa';
 import './Rooms.css';
 
 const Rooms = () => {
@@ -6,8 +6,8 @@ const Rooms = () => {
     {
       type: 'Non A/C Room',
       rent: '₹7,000',
-      advance: '₹2,000',
-      electricity: 'Included',
+      advance: '₹3,000',
+      electricity: 'Charged Separately',
       icon: <FaBolt />,
       features: [
         'Spacious rooms',
@@ -58,10 +58,16 @@ const Rooms = () => {
 
               <div className="room-details">
                 <div className="detail-item">
-                  <strong>Advance:</strong> {room.advance}
+                  <FaMoneyBillWave className="detail-icon" />
+                  <div>
+                    <strong>Advance:</strong> {room.advance}
+                  </div>
                 </div>
                 <div className="detail-item">
-                  <strong>Electricity:</strong> {room.electricity}
+                  <FaPlug className="detail-icon" />
+                  <div>
+                    <strong>Electricity:</strong> {room.electricity}
+                  </div>
                 </div>
               </div>
 

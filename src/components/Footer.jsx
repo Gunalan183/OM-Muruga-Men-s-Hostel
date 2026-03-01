@@ -50,7 +50,7 @@ const Footer = () => {
             </div>
             <div className="contact-item">
               <FaEnvelope />
-              <span>info@ommurugehostel.com</span>
+              <span>ommurugahostel2023@gmail.com</span>
             </div>
           </div>
         </div>

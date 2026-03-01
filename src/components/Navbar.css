@@ -1,31 +1,85 @@
 .navbar {
   position: sticky;
   top: 0;
-  background: #313851;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  background: rgba(30, 41, 59, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 2px 20px rgba(0,0,0,0.1);
   z-index: 1000;
+  padding: 0.75rem 0;
+  transition: all 0.3s ease;
+  border-bottom: 2px solid rgba(249, 115, 22, 0.3);
+}
+
+.navbar.scrolled {
+  background: rgba(30, 41, 59, 0.98);
   padding: 0.5rem 0;
+  box-shadow: 0 4px 30px rgba(0,0,0,0.2);
+  border-bottom: 2px solid rgba(249, 115, 22, 0.4);
 }
 
 .nav-container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 2rem;
 }
 
-.nav-logo h2 {
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  transition: transform 0.3s;
+  height: 100%;
+}
+
+.nav-logo:hover {
+  transform: scale(1.05);
+}
+
+.logo-icon {
+  font-size: 2.5rem;
+  color: #fb923c;
+  font-weight: bold;
+  text-shadow: 0 0 15px rgba(249, 115, 22, 0.6);
+  line-height: 0.8;
+  display: flex;
+  align-items: center;
+  margin-top: -4px;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+  justify-content: center;
+}
+
+.logo-main {
   color: white;
-  font-size: 1.2rem;
-  font-weight: 600;
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.logo-sub {
+  color: #fb923c;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 .nav-menu {
   display: flex;
-  gap: 1.5rem;
+  gap: 2rem;
   align-items: center;
+  flex: 1;
+  justify-content: center;
 }
 
 .nav-link {
@@ -33,34 +87,72 @@
   text-decoration: none;
   font-weight: 500;
   cursor: pointer;
-  transition: color 0.3s;
+  transition: all 0.3s;
   font-size: 0.95rem;
+  position: relative;
+  padding: 0.5rem 0;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #f97316 0%, #fb923c 100%);
+  transition: width 0.3s ease;
 }
 
 .nav-link:hover {
-  color: #C2CBD3;
-  transform: translateY(-2px);
+  color: #fb923c;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-actions {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
 }
 
 .nav-cta {
-  background: #C2CBD3;
-  color: #313851;
-  padding: 0.5rem 1.2rem;
+  padding: 0.6rem 1.25rem;
   border-radius: 25px;
   text-decoration: none;
   font-weight: 600;
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  transition: transform 0.3s, box-shadow 0.3s;
-  box-shadow: 0 4px 15px rgba(194, 203, 211, 0.3);
+  transition: all 0.3s;
   font-size: 0.9rem;
+  white-space: nowrap;
 }
 
-.nav-cta:hover {
-  background: #a8b5c0;
-  transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(194, 203, 211, 0.5);
+.call-btn {
+  background: linear-gradient(135deg, #f97316 0%, #fb923c 100%);
+  color: white;
+  box-shadow: 0 4px 15px rgba(249, 115, 22, 0.3);
+}
+
+.call-btn:hover {
+  background: linear-gradient(135deg, #ea580c 0%, #f97316 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(249, 115, 22, 0.5);
+}
+
+.whatsapp-btn {
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+  color: white;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+}
+
+.whatsapp-btn:hover {
+  background: linear-gradient(135deg, #128C7E 0%, #075E54 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
 }
 
 .nav-toggle {
@@ -68,35 +160,72 @@
   color: white;
   font-size: 1.5rem;
   cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.nav-toggle:hover {
+  transform: scale(1.1);
+  color: #fb923c;
+}
+
+@media (max-width: 1024px) {
+  .nav-menu {
+    gap: 1.5rem;
+  }
+
+  .nav-cta span {
+    display: none;
+  }
+
+  .nav-cta {
+    padding: 0.6rem;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+  }
 }
 
 @media (max-width: 768px) {
+  .nav-container {
+    padding: 0 1.5rem;
+  }
+
   .nav-menu {
     position: fixed;
     left: -100%;
-    top: 55px;
+    top: 60px;
     flex-direction: column;
-    background: #313851;
+    background: rgba(30, 41, 59, 0.98);
     width: 100%;
     text-align: center;
     transition: 0.3s;
     padding: 2rem 0;
     gap: 1.5rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    border-top: 2px solid rgba(249, 115, 22, 0.3);
   }
 
   .nav-menu.active {
     left: 0;
   }
 
+  .nav-link::after {
+    display: none;
+  }
+
   .nav-toggle {
     display: block;
   }
 
-  .nav-cta {
+  .nav-actions {
     display: none;
   }
 
-  .nav-logo h2 {
-    font-size: 1rem;
+  .logo-main {
+    font-size: 1.1rem;
+  }
+
+  .logo-icon {
+    font-size: 2rem;
   }
 }

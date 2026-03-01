@@ -9,7 +9,7 @@
 
 .subsection-title {
   font-size: 2rem;
-  color: #313851;
+  color: #1e293b;
   margin-bottom: 2rem;
   text-align: center;
 }
@@ -28,12 +28,34 @@
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   transition: all 0.3s;
   border: 2px solid transparent;
+  opacity: 0;
+  animation: slideInFromRight 0.6s ease-out forwards;
+}
+
+.facility-card:nth-child(1) { animation-delay: 0.1s; }
+.facility-card:nth-child(2) { animation-delay: 0.2s; }
+.facility-card:nth-child(3) { animation-delay: 0.3s; }
+.facility-card:nth-child(4) { animation-delay: 0.4s; }
+.facility-card:nth-child(5) { animation-delay: 0.5s; }
+.facility-card:nth-child(6) { animation-delay: 0.6s; }
+.facility-card:nth-child(7) { animation-delay: 0.7s; }
+.facility-card:nth-child(8) { animation-delay: 0.8s; }
+
+@keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .facility-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 12px 24px rgba(194, 203, 211, 0.3);
-  border-color: #C2CBD3;
+  box-shadow: 0 12px 24px rgba(249, 115, 22, 0.2);
+  border-color: #fb923c;
 }
 
 .facility-icon {
@@ -45,18 +67,18 @@
 }
 
 .food-icon {
-  background: linear-gradient(135deg, #e8ecef 0%, #C2CBD3 100%);
-  color: #313851;
+  background: linear-gradient(135deg, #fed7aa 0%, #fdba74 100%);
+  color: #ea580c;
 }
 
 .amenity-icon {
-  background: linear-gradient(135deg, #d4dce3 0%, #C2CBD3 100%);
-  color: #313851;
+  background: linear-gradient(135deg, #bfdbfe 0%, #93c5fd 100%);
+  color: #1e40af;
 }
 
 .facility-card h4 {
   font-size: 1.3rem;
-  color: #313851;
+  color: #1e293b;
   margin-bottom: 0.5rem;
 }
 

@@ -1,7 +1,10 @@
 import { FaCheckCircle } from 'react-icons/fa';
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import './About.css';
 
 const About = () => {
+  const sectionRef = useScrollAnimation();
+  
   const features = [
     'Safe & hygienic men\'s hostel',
     'Suitable for students & working professionals',
@@ -12,15 +15,15 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="about">
+    <section id="about" className="about" ref={sectionRef}>
       <div className="container">
-        <div className="section-header">
+        <div className="section-header fade-in-up">
           <h2>About Us</h2>
           <div className="underline"></div>
         </div>
 
         <div className="about-content">
-          <div className="about-text">
+          <div className="about-text fade-in-left">
             <p className="about-intro">
               Welcome to <strong>OM Muruga Men's Hostel</strong>, your home away from home in the heart of Koyambedu, Chennai.
             </p>
@@ -39,16 +42,16 @@ const About = () => {
             </div>
           </div>
 
-          <div className="about-stats">
-            <div className="stat-card">
+          <div className="about-stats fade-in-right">
+            <div className="stat-card scale-in animate-delay-1">
               <h3>₹7000+</h3>
               <p>Starting Rent</p>
             </div>
-            <div className="stat-card">
+            <div className="stat-card scale-in animate-delay-2">
               <h3>3x</h3>
               <p>Daily Meals</p>
             </div>
-            <div className="stat-card">
+            <div className="stat-card scale-in animate-delay-3">
               <h3>24/7</h3>
               <p>Security</p>
             </div>

@@ -44,20 +44,6 @@ const Location = () => {
               </div>
             </div>
 
-            <div className="location-highlights">
-              <div className="highlight">
-                <span className="highlight-number">5 min</span>
-                <span className="highlight-text">Walk to CMBT</span>
-              </div>
-              <div className="highlight">
-                <span className="highlight-number">10 min</span>
-                <span className="highlight-text">To City Center</span>
-              </div>
-              <div className="highlight">
-                <span className="highlight-number">24/7</span>
-                <span className="highlight-text">Public Transport</span>
-              </div>
-            </div>
           </div>
 
           <div className="map-container">

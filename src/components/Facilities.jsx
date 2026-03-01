@@ -1,5 +1,5 @@
-import { FaUtensils, FaWifi, FaTv, FaCoffee, FaTint, FaBroom, FaMotorcycle, FaTshirt } from 'react-icons/fa';
-import { MdLunchDining, MdFastfood } from 'react-icons/md';
+import { FaUtensils, FaWifi, FaTv, FaCoffee, FaTint, FaBroom, FaMotorcycle, FaTshirt, FaUserTie } from 'react-icons/fa';
+import { MdLunchDining, MdFastfood, MdIron, MdRoofing } from 'react-icons/md';
 import './Facilities.css';
 
 const Facilities = () => {
@@ -16,7 +16,9 @@ const Facilities = () => {
     { icon: <FaTv />, title: 'TV', desc: 'Common area entertainment' },
     { icon: <FaTint />, title: 'Drinking Water', desc: 'RO purified water' },
     { icon: <FaBroom />, title: 'House Keeping', desc: 'Daily cleaning service' },
-    { icon: <FaMotorcycle />, title: 'Bike Parking', desc: 'CCTV monitored parking' }
+    { icon: <FaMotorcycle />, title: 'Bike Parking', desc: 'CCTV monitored parking' },
+    { icon: <MdRoofing />, title: 'Terrace', desc: 'Open terrace access' },
+    { icon: <FaUserTie />, title: 'Warden', desc: 'Dedicated warden appointed' }
   ];
 
   return (
@@ -42,7 +44,7 @@ const Facilities = () => {
         </div>
 
         <div className="facilities-section">
-          <h3 className="subsection-title">⚡ Amenities</h3>
+          <h3 className="subsection-title">⚡ What We Offer</h3>
           <div className="facilities-grid">
             {facilities.map((item, index) => (
               <div key={index} className="facility-card">

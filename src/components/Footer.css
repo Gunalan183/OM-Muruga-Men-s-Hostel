@@ -1,5 +1,5 @@
 .footer {
-  background: linear-gradient(rgba(49, 56, 81, 0.95), rgba(49, 56, 81, 0.95)), 
+  background: linear-gradient(rgba(30, 41, 59, 0.95), rgba(15, 23, 42, 0.95)), 
               url('/pictures/murugan/murugar landscape.jpeg');
   background-size: cover;
   background-position: center;
@@ -27,7 +27,7 @@
 .footer-section h4 {
   font-size: 1.2rem;
   margin-bottom: 1rem;
-  color: #C2CBD3;
+  color: #fb923c;
 }
 
 .footer-section p {
@@ -57,10 +57,10 @@
 }
 
 .social-link:hover {
-  background: #C2CBD3;
-  color: #313851;
+  background: linear-gradient(135deg, #f97316 0%, #fb923c 100%);
+  color: white;
   transform: translateY(-3px);
-  box-shadow: 0 4px 15px rgba(194, 203, 211, 0.3);
+  box-shadow: 0 4px 15px rgba(249, 115, 22, 0.5);
 }
 
 .footer-links {
@@ -81,7 +81,7 @@
 }
 
 .footer-links a:hover {
-  color: #C2CBD3;
+  color: #fb923c;
   transform: translateX(5px);
 }
 

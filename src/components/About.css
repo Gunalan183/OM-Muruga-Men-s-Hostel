@@ -40,7 +40,7 @@
 
 .about-intro {
   font-size: 1.2rem;
-  color: #313851;
+  color: #1e293b;
   margin-bottom: 1rem;
   font-weight: 600;
 }
@@ -84,17 +84,19 @@
   border-radius: 12px;
   text-align: center;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  transition: transform 0.3s;
+  transition: all 0.3s;
+  border: 2px solid transparent;
 }
 
 .stat-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 10px 30px rgba(194, 203, 211, 0.3);
+  box-shadow: 0 10px 30px rgba(249, 115, 22, 0.25);
+  border: 2px solid #fb923c;
 }
 
 .stat-card h3 {
   font-size: 2.5rem;
-  color: #313851;
+  color: #f97316;
   margin-bottom: 0.5rem;
 }
 

@@ -5,9 +5,10 @@
 
 .location-content {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1.2fr;
   gap: 3rem;
   margin-top: 3rem;
+  align-items: start;
 }
 
 .location-info {
@@ -24,16 +25,22 @@
   display: flex;
   gap: 1.5rem;
   align-items: flex-start;
+  transition: all 0.3s;
+}
+
+.address-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(249, 115, 22, 0.15);
 }
 
 .address-icon {
   font-size: 2.5rem;
-  color: #313851;
+  color: #f97316;
   flex-shrink: 0;
 }
 
 .address-card h3 {
-  color: #313851;
+  color: #1e293b;
   font-size: 1.5rem;
   margin-bottom: 0.75rem;
 }
@@ -49,16 +56,22 @@
   padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: all 0.3s;
+}
+
+.nearby-section:hover {
+  box-shadow: 0 8px 20px rgba(249, 115, 22, 0.15);
 }
 
 .nearby-section h3 {
-  color: #313851;
+  color: #1e293b;
   font-size: 1.5rem;
   margin-bottom: 1.5rem;
 }
 
 .nearby-grid {
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1rem;
 }
 
@@ -70,16 +83,18 @@
   background: #f8fafc;
   border-radius: 8px;
   transition: all 0.3s;
+  border-left: 3px solid transparent;
 }
 
 .nearby-item:hover {
-  background: #e8ecef;
+  background: #fef3c7;
   transform: translateX(5px);
+  border-left: 3px solid #f97316;
 }
 
 .nearby-icon {
   font-size: 1.5rem;
-  color: #313851;
+  color: #f97316;
   background: white;
   padding: 0.75rem;
   border-radius: 8px;
@@ -89,7 +104,7 @@
 }
 
 .nearby-details h4 {
-  color: #313851;
+  color: #1e293b;
   margin-bottom: 0.25rem;
 }
 
@@ -105,12 +120,18 @@
 }
 
 .highlight {
-  background: #313851;
+  background: linear-gradient(135deg, #f97316 0%, #fb923c 100%);
   padding: 1.5rem;
   border-radius: 12px;
   text-align: center;
   color: white;
-  box-shadow: 0 4px 15px rgba(49, 56, 81, 0.3);
+  box-shadow: 0 4px 15px rgba(249, 115, 22, 0.4);
+  transition: all 0.3s;
+}
+
+.highlight:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(249, 115, 22, 0.5);
 }
 
 .highlight-number {
@@ -129,7 +150,15 @@
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  height: fit-content;
+  height: 100%;
+  min-height: 450px;
+  position: sticky;
+  top: 100px;
+}
+
+.map-container iframe {
+  height: 100%;
+  min-height: 450px;
 }
 
 @media (max-width: 968px) {
@@ -142,11 +171,18 @@
     gap: 2rem;
   }
 
-  .location-highlights {
+  .nearby-grid {
     grid-template-columns: 1fr;
+  }
+
+  .map-container {
+    position: relative;
+    top: 0;
+    min-height: 350px;
   }
 
   .map-container iframe {
     height: 350px;
+    min-height: 350px;
   }
 }

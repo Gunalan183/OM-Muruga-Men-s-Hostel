@@ -88,7 +88,6 @@ const Contact = () => {
             
             <div className="contact-methods">
               <a href="tel:+917305005875" className="contact-method">
-                <FaPhone className="method-icon" />
                 <div>
                   <h4>Call Us</h4>
                   <p>+91 73050 05875</p>
@@ -96,7 +95,6 @@ const Contact = () => {
               </a>
 
               <a href="tel:+916381509650" className="contact-method">
-                <FaPhone className="method-icon" />
                 <div>
                   <h4>Call Us</h4>
                   <p>+91 63815 09650</p>
@@ -104,26 +102,16 @@ const Contact = () => {
               </a>
 
               <a href="tel:+919962363200" className="contact-method">
-                <FaPhone className="method-icon" />
                 <div>
                   <h4>Call Us</h4>
                   <p>+91 99623 63200</p>
                 </div>
               </a>
 
-              <a href="https://wa.me/917305005875" target="_blank" rel="noopener noreferrer" className="contact-method">
-                <FaWhatsapp className="method-icon whatsapp" />
-                <div>
-                  <h4>WhatsApp</h4>
-                  <p>+91 73050 05875</p>
-                </div>
-              </a>
-
               <div className="contact-method">
-                <FaEnvelope className="method-icon" />
                 <div>
                   <h4>Email</h4>
-                  <p>info@ommurugehostel.com</p>
+                  <p>ommurugahostel2023@gmail.com</p>
                 </div>
               </div>
             </div>
