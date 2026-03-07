@@ -189,12 +189,13 @@
 
   .footer-highlights {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 0.75rem;
   }
 
   .footer-highlights li {
     margin-bottom: 0;
+    font-size: 0.9rem;
   }
 
   .footer-bottom p:first-child {
