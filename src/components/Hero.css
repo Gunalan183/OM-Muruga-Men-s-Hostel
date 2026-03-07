@@ -227,9 +227,9 @@
 @media (max-width: 768px) {
   .hero {
     background-attachment: fixed;
-    background-position: 40% center;
-    background-size: cover;
-    min-height: 70vh;
+    background-position: center center;
+    background-size: auto 100%;
+    min-height: 100vh;
   }
 
   .hero-overlay {
