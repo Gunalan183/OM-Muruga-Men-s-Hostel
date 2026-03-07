@@ -1,10 +1,17 @@
 import { useEffect, useRef } from 'react';
-import { FaPhone, FaWhatsapp, FaMapMarkerAlt, FaRupeeSign, FaUtensils } from 'react-icons/fa';
+import { FaPhone, FaWhatsapp, FaMapMarkerAlt, FaRupeeSign, FaUtensils, FaChevronDown } from 'react-icons/fa';
 import './Hero.css';
 
 const Hero = () => {
   const heroContentRef = useRef(null);
   const quickInfoRef = useRef(null);
+
+  const scrollToAbout = () => {
+    const aboutSection = document.getElementById('about');
+    if (aboutSection) {
+      aboutSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   useEffect(() => {
     // Immediately show hero content on mount
@@ -40,7 +47,7 @@ const Hero = () => {
     <section id="home" className="hero">
       <div className="hero-overlay">
         <div className="hero-content" ref={heroContentRef}>
-          <h1 className="hero-title">OM Muruga Men's Hostel</h1>
+          <h1 className="hero-title" data-text="OM Muruga Men's Hostel">OM Muruga Men's Hostel</h1>
           <p className="hero-subtitle">Affordable & Comfortable Men's PG in Koyambedu</p>
           
           <div className="hero-highlights">
@@ -66,6 +73,11 @@ const Hero = () => {
               <FaWhatsapp /> WhatsApp Enquiry
             </a>
           </div>
+
+          <button onClick={scrollToAbout} className="scroll-down-btn" aria-label="Scroll down">
+            <span>Scroll Down</span>
+            <FaChevronDown className="scroll-icon" />
+          </button>
         </div>
       </div>
 

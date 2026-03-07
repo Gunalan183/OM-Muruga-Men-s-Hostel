@@ -6,8 +6,17 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
 }
 
 .App {
   min-height: 100vh;
+  overflow-x: hidden;
+  width: 100%;
 }

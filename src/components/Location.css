@@ -163,7 +163,7 @@
 
 @media (max-width: 968px) {
   .location {
-    padding: 3rem 1.5rem;
+    padding: 3rem 1rem;
   }
 
   .location-content {
@@ -171,8 +171,67 @@
     gap: 2rem;
   }
 
+  .address-card {
+    padding: 1.5rem;
+    gap: 1.25rem;
+  }
+
+  .address-icon {
+    font-size: 2rem;
+  }
+
+  .address-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .address-card p {
+    font-size: 1rem;
+  }
+
+  .nearby-section {
+    padding: 1.5rem;
+  }
+
+  .nearby-section h3 {
+    font-size: 1.3rem;
+  }
+
   .nearby-grid {
     grid-template-columns: 1fr;
+  }
+
+  .nearby-item {
+    padding: 0.85rem;
+  }
+
+  .nearby-icon {
+    font-size: 1.3rem;
+    padding: 0.6rem;
+  }
+
+  .nearby-details h4 {
+    font-size: 0.95rem;
+  }
+
+  .nearby-details span {
+    font-size: 0.85rem;
+  }
+
+  .location-highlights {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .highlight {
+    padding: 1.25rem;
+  }
+
+  .highlight-number {
+    font-size: 1.75rem;
+  }
+
+  .highlight-text {
+    font-size: 0.85rem;
   }
 
   .map-container {
@@ -184,5 +243,28 @@
   .map-container iframe {
     height: 350px;
     min-height: 350px;
+  }
+}
+
+@media (max-width: 480px) {
+  .location {
+    padding: 2.5rem 0.75rem;
+  }
+
+  .address-card {
+    padding: 1.25rem;
+  }
+
+  .nearby-section {
+    padding: 1.25rem;
+  }
+
+  .map-container {
+    min-height: 300px;
+  }
+
+  .map-container iframe {
+    height: 300px;
+    min-height: 300px;
   }
 }
